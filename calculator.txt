@@ -1,0 +1,34 @@
+#include<stdio.h>
+int main(){
+	char symbol;
+	double n1,n2;
+	printf("ENTER OPERATION(+,-,*,/):");
+	scanf("%c",&symbol);
+	printf("ENTER TWO VALUES: ");
+	scanf("%lf %lf",&n1,&n2);
+	
+	switch(symbol){
+		
+		case '+':
+		printf("%.1lf + %.1lf = %.1lf\n",n1,n2,n1+n2);
+		break;
+		
+		case '-':
+		printf("%.1lf -%.1lf = %.1lf\n",n1,n2,n1-n2);
+		break;
+		
+		case '*':
+		printf("%.1lf * %.1lf = %.1lf\n",n1,n2,n1*n2);
+		break;
+		
+		case '/':
+		if(n2 !=0.0)
+		printf("%.1lf / %.1lf = %.1lf\n",n1,n2,n1/n2);
+		else
+		printf("ERROR !");
+		break;
+		default:
+		printf("ERROR !");
+	}
+	return 0;
+}
